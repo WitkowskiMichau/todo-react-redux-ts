@@ -2,6 +2,13 @@ Good morning!
 
 Project is based on @petejkim/react-scripts-ts-sass.
 
+Select an item - click on one
+Delete item - red, minut sign
+Add - input on the button, both enter and green plus sign works
+
+To sort object by timestamp, test, or text. Click tablets on the top.
+
+
 ### `yarn install`
 
 Need before first run to install dependencies.
