@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setTodoSorting } from '../actions'
-import { ReduxState } from '../reducers';
-import { SortOptions } from '../actions/sortOptions';
+import { SortOptions } from '../sortOptions';
+import { ReduxState } from '../Interfaces';
 
 interface Props {
     active: boolean,

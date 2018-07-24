@@ -1,6 +1,6 @@
 import { addTodo, selectTodo, deleteTodo, setTodoSorting } from '../index';
 import { actionTypes } from '../../actionTypes';
-import { SortOptions } from '../SortOptions';
+import { SortOptions } from '../../sortOptions';
 
 describe('Actions: addTodo ', () => {
     it('has the correct type', () => {

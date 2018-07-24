@@ -1,6 +1,6 @@
-import { SortOptions } from '../actions/sortOptions'
+import { SortOptions } from '../sortOptions'
 import { actionTypes } from '../actionTypes';
-import { Action } from '../actions';
+import { Action } from '../Interfaces';
 
 const todosSorting = (state: SortOptions = SortOptions.SORT_TIMESTAMP, action: Action<SortOptions>) => {
     switch (action.type) {

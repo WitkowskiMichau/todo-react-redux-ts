@@ -10,13 +10,6 @@
     "moduleResolution": "node",
     "rootDir": "src",
     "keyofStringsOnly": true,
-    //    "forceConsistentCasingInFileNames": true,
-    //    "noImplicitReturns": true,
-    //    "noImplicitThis": true,
-    //    "noImplicitAny": false,
-    //    "strictNullChecks": true,
-    //    "suppressImplicitAnyIndexErrors": false,
-    //    "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true
   },
   "exclude": [

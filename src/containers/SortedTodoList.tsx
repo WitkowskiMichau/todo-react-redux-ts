@@ -1,21 +1,21 @@
 import { connect } from 'react-redux'
-import { deleteTodo, selectTodo, todoPayload } from '../actions'
-import { SortOptions } from '../actions/sortOptions'
+import { deleteTodo, selectTodo } from '../actions'
+import { SortOptions } from '../sortOptions'
 import TodoList from '../components/TodoList'
 import React from 'react';
-import { ReduxState } from '../reducers';
+import { todoType, ReduxState } from '../Interfaces';
 
 interface StateProps {
-    todos: Array<todoPayload>,
-    selectedTodo: todoPayload
+    todos: Array<todoType>,
+    selectedTodo: todoType
 }
 
 interface DispatchProps {
-    selectTodo: (todo: todoPayload) => todoPayload,
+    selectTodo: (todo: todoType) => todoType,
     deleteTodo: (id: number) => any
 }
 
-const getSortedTodos = (todos: Array<todoPayload>, sortBy: SortOptions) => {
+const getSortedTodos = (todos: Array<todoType>, sortBy: SortOptions) => {
     switch (sortBy) {
         case SortOptions.SORT_NAME:
             return todos.slice(0).sort((a, b) => a.text.localeCompare(b.text));

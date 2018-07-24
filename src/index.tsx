@@ -3,7 +3,7 @@ import App from './components/App';
 import Root from './Root';
 import React from 'react'
 import './styles/index.css'
-import { SortOptions } from './actions/sortOptions';
+import { SortOptions } from './sortOptions';
 
 const initialState = {
     todoSelected: null,

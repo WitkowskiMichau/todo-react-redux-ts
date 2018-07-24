@@ -1,5 +1,5 @@
 import React from 'react'
-import { SortOptions } from '../actions/sortOptions'
+import { SortOptions } from '../sortOptions'
 import SortLink from '../containers/SortLink'
 
 const TableHeader: React.StatelessComponent<{}> = () => (

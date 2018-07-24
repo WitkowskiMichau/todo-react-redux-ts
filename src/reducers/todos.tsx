@@ -1,7 +1,7 @@
 import { actionTypes } from '../actionTypes';
-import { Action, todoPayload } from '../actions';
+import { Action, todoType  } from '../Interfaces';
 
-const todos = (state: Array<todoPayload> = [], action: Action<number | todoPayload>) => {
+const todos = (state: Array<todoType> = [], action: Action<number | todoType>) => {
     switch (action.type) {
         case actionTypes.ADD_TODO:
             return [...state, action.payload];

@@ -1,19 +1,10 @@
 import { actionTypes } from '../actionTypes';
-import { SortOptions } from './SortOptions';
+import { SortOptions } from '../sortOptions';
+import { Action, todoType } from '../Interfaces';
 
 let idNumber = 0;
 
-export type todoPayload = {
-    text: string,
-    id: number,
-    timestamp: number
-}
-export type Action<T> = {
-    type: actionTypes;
-    payload: T;
-};
-
-export const addTodo = (text: string): Action<todoPayload> => ({
+export const addTodo = (text: string): Action<todoType> => ({
     type: actionTypes.ADD_TODO,
     payload: {
         text,
@@ -22,7 +13,7 @@ export const addTodo = (text: string): Action<todoPayload> => ({
     }
 });
 
-export const selectTodo = (todo: todoPayload): Action<todoPayload> => ({
+export const selectTodo = (todo: todoType): Action<todoType> => ({
     type: actionTypes.SELECT_TODO,
     payload: {...todo}
 });

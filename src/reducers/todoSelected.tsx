@@ -1,5 +1,5 @@
 import { actionTypes } from '../actionTypes';
-import { Action } from '../actions';
+import { Action } from '../Interfaces';
 
 const todoSelected = (state: null | actionTypes  = null , action: Action<any>) => {
     switch (action.type) {

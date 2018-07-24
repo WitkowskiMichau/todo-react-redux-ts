@@ -1,6 +1,6 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import { SortOptions } from '../../actions/sortOptions';
+import { SortOptions } from '../../sortOptions';
 import Root from '../../Root'
 import AddTodo from '../AddTodo'
 
