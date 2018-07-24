@@ -4,8 +4,9 @@ import TodoList from '../TodoList';
 import Todo from '../Todo';
 
 describe('Todo: ', () => {
-    let wrapped, todos;
+    let wrapped, todos, deleteTodo;
     beforeEach(() => {
+        deleteTodo = jest.fn();
         todos = [{
             text: 'text111',
             id: '111',
@@ -15,7 +16,7 @@ describe('Todo: ', () => {
             id: '222',
             timestamp: '1532352425083'
         }];
-        wrapped = mount(<TodoList todos={todos} />);
+        wrapped = mount(<TodoList todos={todos} deleteTodo={deleteTodo}/>);
     });
 
     afterEach(() => {

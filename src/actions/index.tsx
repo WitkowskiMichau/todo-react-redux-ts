@@ -26,3 +26,8 @@ export const setTodoSorting = (sortBy: SortOptions): Action<SortOptions> => ({
     type: actionTypes.SET_TODO_SORTING,
     payload: sortBy
 });
+
+export const deleteTodo = (id: number): Action<number> => ({
+    type: actionTypes.DELETE_TODO,
+    payload: id
+});

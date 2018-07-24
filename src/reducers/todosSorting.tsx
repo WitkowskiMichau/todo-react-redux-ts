@@ -1,14 +1,15 @@
-import { SortOptions } from '../actions/sortOptions'
 import { actionTypes } from '../actionTypes';
-import { Action } from '../actions';
+import { Action, todoPayload } from '../actions';
 
-const todosSorting = (state: SortOptions = SortOptions.SORT_TIMESTAMP, action: Action<SortOptions>) => {
+const todos = (state: Array<todoPayload> = [], action: Action<number | todoPayload>) => {
     switch (action.type) {
-        case actionTypes.SET_TODO_SORTING:
-            return action.payload;
+        case actionTypes.ADD_TODO:
+            return [...state, action.payload];
+        case actionTypes.DELETE_TODO:
+            return [...state.filter(({id}) => id !== action.payload)];
         default:
             return state;
     }
 };
 
-export default todosSorting
+export default todos;

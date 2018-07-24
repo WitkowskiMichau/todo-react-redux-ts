@@ -125,3 +125,18 @@
   color: #ffffff; }
   .submit-button:hover {
     background-color: #00ff63; }
+
+.todo-delete-button {
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  background-color: #ff666e;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 27px;
+  font-size: 12px;
+  color: #ffffff; }
+  .todo-delete-button:hover {
+    background-color: #ff0013; }

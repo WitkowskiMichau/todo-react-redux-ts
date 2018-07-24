@@ -149,3 +149,20 @@
     background-color: $green-hover-color;
   }
 }
+
+.todo-delete-button {
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  background-color: $red-colour;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 27px;
+  font-size: 12px;
+  color: $white-color;
+  &:hover {
+    background-color: $red-hover-colour;
+  }
+}

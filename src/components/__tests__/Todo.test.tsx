@@ -3,7 +3,8 @@ import React from 'react';
 import Todo from '..//Todo'
 
 describe('Todo: ', () => {
-    let wrapped, todo;
+    let wrapped, todo, deleteTodo;
+    deleteTodo = jest.fn();
     beforeEach(() => {
         todo = {
             text: 'Text123',
@@ -23,6 +24,11 @@ describe('Todo: ', () => {
 
     it('render Todo date in proper format', () => {
         expect(wrapped.find('.todo-item-details-date').render().text()).toEqual(`${new Date(todo.timestamp).toLocaleString()}`);
+    });
+
+    it('call delete function on click', () => {
+        wrapped.find('.todo-delete-button').simulate('click');
+        expect(deleteTodo).toHaveBeenCalledWith(todo.id);
     });
 
     afterEach(() => {
