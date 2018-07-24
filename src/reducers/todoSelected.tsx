@@ -1,14 +1,13 @@
-import { SortOptions } from '../actions/sortOptions'
 import { actionTypes } from '../actionTypes';
 import { Action } from '../actions';
 
-const todosSorting = (state: SortOptions = SortOptions.SORT_TIMESTAMP, action: Action<SortOptions>) => {
+const todoSelected = (state: null | actionTypes  = null , action: Action<any>) => {
     switch (action.type) {
-        case actionTypes.SET_TODO_SORTING:
+        case actionTypes.SELECT_TODO:
             return action.payload;
         default:
-            return state;
+            return state
     }
 };
 
-export default todosSorting
+export default todoSelected

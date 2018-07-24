@@ -16,7 +16,6 @@ interface DispatchProps {
 }
 
 const getSortedTodos = (todos: Array<todoPayload>, sortBy: SortOptions) => {
-    console.log(this.props, this.state)
     switch (sortBy) {
         case SortOptions.SORT_NAME:
             return todos.slice(0).sort((a, b) => a.text.localeCompare(b.text));

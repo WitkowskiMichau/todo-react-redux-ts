@@ -23,6 +23,21 @@
   align-items: center;
   padding-bottom: 10px; }
 
+.todo-delete-button {
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  background-color: #ff666e;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 27px;
+  font-size: 12px;
+  color: #ffffff; }
+  .todo-delete-button:hover {
+    background-color: #ff0013; }
+
 .todo-item {
   height: 40px;
   width: 350px;
@@ -115,28 +130,14 @@
   position: absolute;
   right: 17px;
   top: 14px;
-  background-color: #65ff7c;
+  background-color: #48b458;
   height: 20px;
   width: 20px;
   border-radius: 27px;
   font-size: 17px;
   line-height: 17px;
   padding: 0;
-  color: #ffffff; }
+  color: #ffffff;
+  border: none; }
   .submit-button:hover {
-    background-color: #00ff63; }
-
-.todo-delete-button {
-  position: absolute;
-  right: 17px;
-  top: 14px;
-  background-color: #ff666e;
-  height: 20px;
-  width: 20px;
-  line-height: 20px;
-  text-align: center;
-  border-radius: 27px;
-  font-size: 12px;
-  color: #ffffff; }
-  .todo-delete-button:hover {
-    background-color: #ff0013; }
+    background-color: #1cd427; }

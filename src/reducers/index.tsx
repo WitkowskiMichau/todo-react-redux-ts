@@ -13,7 +13,8 @@ export interface ReduxState {
 
 const rootReducers: Reducer<any> = combineReducers({
     todos,
-    todosSorting
+    todosSorting,
+    todoSelected
 });
 
 export default rootReducers;
