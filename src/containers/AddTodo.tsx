@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Redux from 'redux';
+import { addTodo } from '../actions';
 
-interface OwnProps {}
-type Props =  OwnProps
+export interface OwnProps {}
+interface DispatchProps {
+    addTodo: (inputValue: string) => void
+}
+type Props = DispatchProps & OwnProps;
 
 interface State {
     inputValue: string
@@ -15,6 +20,7 @@ class AddTodo extends Component<Props, State> {
     };
     handleSubmit = (event: React.FormEvent<EventTarget>): void => {
         event.preventDefault();
+        this.props.addTodo(this.state.inputValue);
         this.setState({inputValue: ''})
     };
 
@@ -40,4 +46,8 @@ class AddTodo extends Component<Props, State> {
     }
 }
 
-export default AddTodo;
+const mapDispatchToProps = (dispatch: Redux.Dispatch<any>): DispatchProps => ({
+    addTodo: (text) => dispatch(addTodo(text))
+});
+
+export default connect(null, mapDispatchToProps)(AddTodo);

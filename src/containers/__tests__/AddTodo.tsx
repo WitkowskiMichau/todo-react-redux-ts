@@ -1,13 +1,21 @@
-import {mount} from 'enzyme';
+import { mount } from 'enzyme';
 import React from 'react';
 import Root from '../../Root'
 import AddTodo from '../AddTodo'
+import { ReduxState } from '../../reducers';
 
 describe('AddTodo container: ', () => {
     let wrapped;
+    let initialState: ReduxState = {
+        todos: []
+    };
 
     beforeEach(() => {
-        wrapped = mount(<AddTodo/>);
+        wrapped = mount(
+            <Root initialState={initialState}>
+                <AddTodo/>
+            </Root>
+        );
     });
 
     afterEach(() => {
@@ -20,7 +28,7 @@ describe('AddTodo container: ', () => {
     });
 
     it('when form is submitted, input gets emptied', () => {
-        wrapped.find('input').simulate('change', {target: {value: 'foo'}});
+        wrapped.find('input').simulate('change', { target: { value: 'foo' } });
         wrapped.find('form').simulate('submit');
         expect(wrapped.find('input').prop('value')).toEqual('')
     });

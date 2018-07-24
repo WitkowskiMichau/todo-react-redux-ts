@@ -1,5 +1,11 @@
-import { combineReducers } from 'redux'
+import { combineReducers, Reducer } from 'redux'
+import { todoPayload } from '../actions';
+import todos from './todos';
 
-export interface ReduxState {}
+export interface ReduxState {
+    todos: Array<todoPayload>,
+}
 
-export default combineReducers({})
+const rootReducers: Reducer<any> = combineReducers({ todos });
+
+export default rootReducers;
