@@ -12,7 +12,54 @@
   justify-content: flex-start;
   position: relative; }
 
-submit-form {
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 495px;
+  overflow-y: auto;
+  overflow-x: visible;
+  width: 100%;
+  overflow-x: visible;
+  align-items: center;
+  padding-bottom: 10px; }
+
+.todo-item {
+  height: 40px;
+  width: 350px;
+  border-radius: 30px;
+  margin: 7px 0;
+  font-weight: 200;
+  padding: 5px 10px;
+  line-height: 40px;
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 5px 5px 20px -9px rgba(0, 0, 0, 0.75); }
+  .todo-item.active {
+    background-color: #63D7D9; }
+  .todo-item:hover {
+    background-color: #63D7D9; }
+
+.todo-item-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 10px; }
+
+.todo-item-details-text {
+  max-width: 165px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.todo-item-details span {
+  padding: 0 5px; }
+
+.todo-item-details-small {
+  padding: 0 2px;
+  font-size: 10px; }
+
+.submit-form {
   height: 50px;
   width: 370px;
   border-radius: 30px;

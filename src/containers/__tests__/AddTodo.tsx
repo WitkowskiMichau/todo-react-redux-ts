@@ -1,12 +1,13 @@
 import { mount } from 'enzyme';
 import React from 'react';
+import { SortOptions } from '../../actions/sortOptions';
 import Root from '../../Root'
 import AddTodo from '../AddTodo'
-import { ReduxState } from '../../reducers';
 
 describe('AddTodo container: ', () => {
     let wrapped;
-    let initialState: ReduxState = {
+    let initialState = {
+        todoSelected: null,
         todos: []
     };
 

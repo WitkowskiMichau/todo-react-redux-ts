@@ -1,4 +1,5 @@
 import { actionTypes } from '../actionTypes';
+import { SortOptions } from './SortOptions';
 
 let idNumber = 0;
 
@@ -19,4 +20,9 @@ export const addTodo = (text: string): Action<todoPayload> => ({
         id: idNumber++,
         timestamp: Date.now()
     }
+});
+
+export const setTodoSorting = (sortBy: SortOptions): Action<SortOptions> => ({
+    type: actionTypes.SET_TODO_SORTING,
+    payload: sortBy
 });

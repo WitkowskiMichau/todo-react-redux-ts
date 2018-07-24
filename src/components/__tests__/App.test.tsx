@@ -1,36 +1,23 @@
-import { mount } from 'enzyme';
 import React from 'react';
-import Root from '../../Root'
-import AddTodo from '../../containers/AddTodo';
-import { ReduxState } from '../../reducers';
+import { shallow } from 'enzyme';
+import App from '../../components/App';
+import AddTodo from '../../containers/AddTodo'
+import SortedTodoList from '../../containers/SortedTodoList'
 
-describe('AddTodo container: ', () => {
-    let wrapped;
-    let initialState: ReduxState = {
-        todos: []
-    };
+let wrapped;
+
+describe('App: ', () => {
 
     beforeEach(() => {
-        wrapped = mount(
-            <Root initialState={initialState}>
-                <AddTodo/>
-            </Root>
-        );
+        wrapped = shallow(<App/>);
     });
 
-    afterEach(() => {
-        wrapped.unmount();
+    it('shows a AddTodo', () => {
+        expect(wrapped.find(AddTodo).length).toEqual(1);
     });
 
-    it('has one empty input at start', () => {
-        expect(wrapped.find('input').length).toEqual(1)
-        expect(wrapped.find('input').prop('value')).toEqual('')
-    });
-
-    it('when form is submitted, input gets emptied', () => {
-        wrapped.find('input').simulate('change', { target: { value: 'foo' } });
-        wrapped.find('form').simulate('submit');
-        expect(wrapped.find('input').prop('value')).toEqual('')
+    it('shows a SortedTodoList', () => {
+        expect(wrapped.find(SortedTodoList).length).toEqual(1);
     });
 
 });
