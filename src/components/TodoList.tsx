@@ -3,16 +3,19 @@ import Todo from '../components/Todo'
 import { todoPayload }  from '../actions';
 
 interface Props {
-    todos: Array<todoPayload>,
+    todos: Array<todoPayload>
+    selectedTodo: todoPayload,
+    selectTodo: (todo: todoPayload) => any,
     deleteTodo: (id: number) => any
 }
 
-const TodoList: React.StatelessComponent<Props> = ({todos, deleteTodo}) => (
+const TodoList: React.StatelessComponent<Props> = ({todos, selectedTodo, selectTodo, deleteTodo}) => (
     <div className="todo-list">
         {todos.map(todo =>
-            <div className="todo-item" key={todo.id}>
+            <div className={`todo-item ${selectedTodo !== null && selectedTodo.id === todo.id ? 'active' : ''}`} key={todo.id}>
                 <Todo
                     {...todo}
+                    onClick={() => selectTodo(todo)}
                     deleteTodo={deleteTodo}
                 />
             </div>

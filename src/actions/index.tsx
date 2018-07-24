@@ -22,12 +22,17 @@ export const addTodo = (text: string): Action<todoPayload> => ({
     }
 });
 
-export const setTodoSorting = (sortBy: SortOptions): Action<SortOptions> => ({
-    type: actionTypes.SET_TODO_SORTING,
-    payload: sortBy
+export const selectTodo = (todo: todoPayload): Action<todoPayload> => ({
+    type: actionTypes.SELECT_TODO,
+    payload: {...todo}
 });
 
 export const deleteTodo = (id: number): Action<number> => ({
     type: actionTypes.DELETE_TODO,
     payload: id
+});
+
+export const setTodoSorting = (sortBy: SortOptions): Action<SortOptions> => ({
+    type: actionTypes.SET_TODO_SORTING,
+    payload: sortBy
 });

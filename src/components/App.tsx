@@ -1,8 +1,8 @@
 import React from 'react'
-import AddTodo from '../containers/AddTodo';
+import 'styles/app.css';
+import AddTodo from '../containers/AddTodo'
 import SortedTodoList from '../containers/SortedTodoList'
-import TableHeader from './TableHeader';
-import '../styles/App.css'
+import TableHeader from './TableHeader'
 
 const App: React.StatelessComponent<{}> = () => (
     <div className="app-container">

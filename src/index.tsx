@@ -6,6 +6,7 @@ import './styles/index.css'
 import { SortOptions } from './actions/sortOptions';
 
 const initialState = {
+    todoSelected: null,
     todosSorting: SortOptions.SORT_TIMESTAMP,
     todos: [
         {

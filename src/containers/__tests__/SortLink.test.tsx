@@ -1,35 +1,53 @@
-import { mount } from 'enzyme';
-import React from 'react';
-import { SortOptions } from '../../actions/sortOptions';
-import Root from '../../Root'
-import SortLink from '../SortLink';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addTodo } from '../actions'
+import * as Redux from 'redux';
 
-describe('SortLink container: ', () => {
-    let wrapped;
-    let initialState = {
-        todosSorting: SortOptions.SORT_TIMESTAMP,
-        todos: []
+export interface OwnProps {}
+interface DispatchProps {
+    addTodo: (inputValue: string) => void
+}
+type Props = DispatchProps & OwnProps
+
+interface State {
+    inputValue: string
+}
+
+class AddTodo extends Component<Props, State> {
+    state = {inputValue: ''};
+    handleChange = event => {
+        this.setState({inputValue: event.target.value})
+    };
+    handleSubmit = event => {
+        event.preventDefault();
+        this.props.addTodo(this.state.inputValue);
+        this.setState({inputValue: ''})
     };
 
-    beforeEach(() => {
-        wrapped = mount(
-            <Root initialState={initialState}>
-                <SortLink sortBy={SortOptions.SORT_ID}>
-                    Id
-                </SortLink>
-            </Root>
-        );
-    });
+    render() {
+        return (
+            <form
+                className="submit-form"
+                onSubmit={this.handleSubmit}
+            >
+                <input
+                    className="submit-input"
+                    value={this.state.inputValue}
+                    onChange={this.handleChange}
+                />
+                <button
+                    className="submit-button"
+                    type="submit"
+                >
+                    +
+                </button>
+            </form>
+        )
+    }
+}
 
-    afterEach(() => {
-        wrapped.unmount();
-    });
-
-    it('should change sorting on click', () => {
-        expect(wrapped.find('.active').length).toEqual(0);
-
-        wrapped.find('.table-header-item').simulate('click');
-
-        expect(wrapped.find('.active').length).toEqual(1);
-    })
+const mapDispatchToProps = (dispatch: Redux.Dispatch<any>): DispatchProps => ({
+    addTodo: (text) => dispatch(addTodo(text))
 });
+
+export default connect(null, mapDispatchToProps)(AddTodo);

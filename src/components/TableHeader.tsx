@@ -4,7 +4,7 @@ import SortLink from '../containers/SortLink'
 
 const TableHeader: React.StatelessComponent<{}> = () => (
     <div className="table-header">
-        <span className="sort-by-header">Sort by:</span>
+        <span className="sort-by-header">Sorty by:</span>
         <SortLink sortBy={SortOptions.SORT_ID}>
             Id
         </SortLink>
