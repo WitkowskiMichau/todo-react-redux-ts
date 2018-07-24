@@ -7,7 +7,6 @@ import AddTodo from '../AddTodo'
 describe('AddTodo container: ', () => {
     let wrapped;
     let initialState = {
-        todoSelected: null,
         todos: []
     };
 

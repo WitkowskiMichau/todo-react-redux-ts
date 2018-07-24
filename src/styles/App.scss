@@ -72,6 +72,37 @@
   font-size: 10px;
 }
 
+.sort-by-header {
+  padding-top: 3px;
+}
+
+.table-header {
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.table-header-item {
+  background-color: white;
+  box-shadow: 7px 9px 22px -9px rgba(0, 0, 0, 0.75);
+  padding: 6px 11px;
+  margin: 0 6px;
+  border-radius: 16px;
+  font-size: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: $medium-turquoise;;
+  }
+  &.active {
+    background-color: $medium-turquoise;;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+}
 
 .submit-form {
   height: 50px;

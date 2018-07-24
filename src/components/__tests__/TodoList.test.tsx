@@ -15,7 +15,7 @@ describe('Todo: ', () => {
             id: '222',
             timestamp: '1532352425083'
         }];
-        wrapped = mount(<TodoList todos={todos}/>);
+        wrapped = mount(<TodoList todos={todos} />);
     });
 
     afterEach(() => {

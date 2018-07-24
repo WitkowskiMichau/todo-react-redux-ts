@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../../components/App';
+import TableHeader from '../../components/TableHeader'
 import AddTodo from '../../containers/AddTodo'
 import SortedTodoList from '../../containers/SortedTodoList'
 
@@ -10,6 +11,10 @@ describe('App: ', () => {
 
     beforeEach(() => {
         wrapped = shallow(<App/>);
+    });
+
+    it('shows a TabletHeader', () => {
+        expect(wrapped.find(TableHeader).length).toEqual(1);
     });
 
     it('shows a AddTodo', () => {
