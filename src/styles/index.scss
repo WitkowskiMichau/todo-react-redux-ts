@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, $royal-blue-color 0%, $cornflower-blue-color 100%);
+}
+
+#root{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
