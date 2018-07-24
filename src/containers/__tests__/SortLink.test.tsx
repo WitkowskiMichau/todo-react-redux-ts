@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions'
+import { addTodo } from '../../actions'
 import * as Redux from 'redux';
 
 export interface OwnProps {}

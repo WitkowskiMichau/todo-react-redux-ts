@@ -1,5 +1,5 @@
 import React from 'react'
-import 'styles/app.css';
+import '../styles/App.css';
 import AddTodo from '../containers/AddTodo'
 import SortedTodoList from '../containers/SortedTodoList'
 import TableHeader from './TableHeader'
