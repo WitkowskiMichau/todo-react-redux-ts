@@ -11,17 +11,17 @@ const initialState = {
     todos: [
         {
             id: 99,
-            text: 'xx',
+            text: 'Read a book.',
             timestamp: Date.now()
         },
         {
             id: 88,
-            text: 'yyy',
+            text: 'Swimming.',
             timestamp: Date.now()
         },
         {
             id: 77,
-            text: 'bb',
+            text: 'Programming.',
             timestamp: Date.now()
         },
         {
