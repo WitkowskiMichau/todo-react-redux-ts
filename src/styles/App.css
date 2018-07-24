@@ -22,8 +22,35 @@
   overflow-x: visible;
   align-items: center;
   padding-bottom: 10px; }
+  .todo-list__item {
+    height: 40px;
+    width: 350px;
+    border-radius: 30px;
+    margin: 7px 0;
+    font-weight: 200;
+    padding: 5px 10px;
+    line-height: 40px;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 5px 5px 20px -9px rgba(0, 0, 0, 0.75); }
+    .todo-list__item--selected {
+      background-color: #63D7D9; }
+    .todo-list__item:hover {
+      background-color: #63D7D9; }
 
-.todo-delete-button {
+.todo-list-item__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 10px; }
+  .todo-list-item__details span {
+    padding: 0 5px; }
+  .todo-list-item__details__timestamp {
+    padding: 0 2px;
+    font-size: 10px; }
+
+.todo-list-item__delete-button {
   position: absolute;
   right: 17px;
   top: 14px;
@@ -35,47 +62,14 @@
   border-radius: 27px;
   font-size: 12px;
   color: #ffffff; }
-  .todo-delete-button:hover {
+  .todo-list-item__delete-button:hover {
     background-color: #ff0013; }
 
-.todo-item {
-  height: 40px;
-  width: 350px;
-  border-radius: 30px;
-  margin: 7px 0;
-  font-weight: 200;
-  padding: 5px 10px;
-  line-height: 40px;
-  position: relative;
-  cursor: pointer;
-  background-color: white;
-  box-shadow: 5px 5px 20px -9px rgba(0, 0, 0, 0.75); }
-  .todo-item.active {
-    background-color: #63D7D9; }
-  .todo-item:hover {
-    background-color: #63D7D9; }
-
-.todo-item-details {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  padding-left: 10px; }
-
-.todo-item-details-text {
+.todo-list-item__text {
   max-width: 165px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
-
-.todo-item-details span {
-  padding: 0 5px; }
-
-.todo-item-details-small {
-  padding: 0 2px;
-  font-size: 10px; }
-
-.sort-by-header {
-  padding-top: 3px; }
 
 .table-header {
   width: 350px;
@@ -84,21 +78,22 @@
   justify-content: left;
   cursor: pointer;
   margin: 10px 0; }
-
-.table-header-item {
-  background-color: white;
-  box-shadow: 7px 9px 22px -9px rgba(0, 0, 0, 0.75);
-  padding: 6px 11px;
-  margin: 0 6px;
-  border-radius: 16px;
-  font-size: 10px;
-  cursor: pointer; }
-  .table-header-item:hover {
-    background-color: #63D7D9; }
-  .table-header-item.active {
-    background-color: #63D7D9; }
-  .table-header-item:first-child {
-    margin-left: 0; }
+  .table-header__sort-by {
+    padding-top: 3px; }
+  .table-header__item {
+    background-color: white;
+    box-shadow: 7px 9px 22px -9px rgba(0, 0, 0, 0.75);
+    padding: 6px 11px;
+    margin: 0 6px;
+    border-radius: 16px;
+    font-size: 10px;
+    cursor: pointer; }
+    .table-header__item:hover {
+      background-color: #63D7D9; }
+    .table-header__item--active {
+      background-color: #63D7D9; }
+    .table-header__item:first-child {
+      margin-left: 0; }
 
 .submit-form {
   height: 50px;
@@ -113,31 +108,29 @@
   cursor: pointer;
   background-color: white;
   box-shadow: 7px 9px 22px -9px rgba(0, 0, 0, 0.75); }
-
-.submit-input {
-  display: block;
-  padding: 0.85em 1.5em;
-  width: 265px;
-  border-radius: 2em;
-  background: #fff;
-  height: 18px;
-  border: none;
-  font-size: 16px; }
-  .submit-input:focus {
-    outline: none; }
-
-.submit-button {
-  position: absolute;
-  right: 17px;
-  top: 14px;
-  background-color: #48b458;
-  height: 20px;
-  width: 20px;
-  border-radius: 27px;
-  font-size: 17px;
-  line-height: 17px;
-  padding: 0;
-  color: #ffffff;
-  border: none; }
-  .submit-button:hover {
-    background-color: #1cd427; }
+  .submit-form__input {
+    display: block;
+    padding: 0.85em 1.5em;
+    width: 265px;
+    border-radius: 2em;
+    background: #fff;
+    height: 18px;
+    border: none;
+    font-size: 16px; }
+    .submit-form__input:focus {
+      outline: none; }
+  .submit-form__button {
+    position: absolute;
+    right: 17px;
+    top: 14px;
+    background-color: #48b458;
+    height: 20px;
+    width: 20px;
+    border-radius: 27px;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 0;
+    color: #ffffff;
+    border: none; }
+    .submit-form__button:hover {
+      background-color: #1cd427; }

@@ -25,7 +25,7 @@ interface DispatchProps {
 const Link: React.StatelessComponent<Props> = ({active, children, onClick}) => (
     <div
         onClick={onClick}
-        className={`table-header-item ${active ? 'active' : ''}`}
+        className={`table-header__item ${active ? 'table-header__item--active' : ''}`}
     >
         {children}
     </div>

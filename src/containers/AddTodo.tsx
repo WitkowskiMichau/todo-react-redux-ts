@@ -31,12 +31,12 @@ class AddTodo extends Component<Props, State> {
                 onSubmit={this.handleSubmit}
             >
                 <input
-                    className="submit-input"
+                    className="submit-form__input"
                     value={this.state.inputValue}
                     onChange={this.handleChange}
                 />
                 <button
-                    className="submit-button"
+                    className="submit-form__button"
                     type="submit"
                 >
                     +

@@ -53,62 +53,62 @@ describe('SortedTodoList container: ', () => {
     it('should display todos', () => {
         changeSorting(SortOptions.SORT_TIMESTAMP);
 
-        expect(wrapped.find('.todo-item').length).toEqual(4)
+        expect(wrapped.find('.todo-list__item').length).toEqual(4)
     });
 
-    it('should display todo as active/selected', () => {
+    it('should display todo as elected', () => {
         changeSorting(SortOptions.SORT_NAME);
 
-        expect(wrapped.find('.active').find('.todo-item-details-id').at(0).text()).toEqual('2');
+        expect(wrapped.find('.todo-list__item--selected').find('.todo-list-item__details__id').at(0).text()).toEqual('2');
     });
 
     it('should change selection on click', () => {
         changeSorting(SortOptions.SORT_NAME);
 
-        expect(wrapped.find('.active').find('.todo-item-details-id').at(0).text()).toEqual('2');
+        expect(wrapped.find('.todo-list__item--selected').find('.todo-list-item__details__id').at(0).text()).toEqual('2');
 
-        wrapped.find('.todo-item-details-id').at(1).simulate('click');
+        wrapped.find('.todo-list-item__details__id').at(1).simulate('click');
 
-        expect(wrapped.find('.active').find('.todo-item-details-id').at(0).text()).toEqual('3');
+        expect(wrapped.find('.todo-list__item--selected').find('.todo-list-item__details__id').at(0).text()).toEqual('3');
     });
 
     it('should delete todo on click', () => {
         changeSorting(SortOptions.SORT_ID);
 
-        expect(wrapped.find('.todo-item').length).toEqual(4);
+        expect(wrapped.find('.todo-list__item').length).toEqual(4);
 
-        wrapped.find('.todo-item-details').at(0).find('.todo-delete-button').simulate('click');
+        wrapped.find('.todo-list-item__details').at(0).find('.todo-list-item__delete-button').simulate('click');
         wrapped.update();
 
-        expect(wrapped.find('.todo-item').length).toEqual(3);
+        expect(wrapped.find('.todo-list__item').length).toEqual(3);
     });
 
     describe('should sort via:', () => {
         it('timestamp', () => {
             changeSorting(SortOptions.SORT_TIMESTAMP);
 
-            expect(wrapped.find('.todo-item-details-id').at(0).text()).toEqual('4');
-            expect(wrapped.find('.todo-item-details-id').at(1).text()).toEqual('3');
-            expect(wrapped.find('.todo-item-details-id').at(2).text()).toEqual('2');
-            expect(wrapped.find('.todo-item-details-id').at(3).text()).toEqual('1');
+            expect(wrapped.find('.todo-list-item__details__id').at(0).text()).toEqual('4');
+            expect(wrapped.find('.todo-list-item__details__id').at(1).text()).toEqual('3');
+            expect(wrapped.find('.todo-list-item__details__id').at(2).text()).toEqual('2');
+            expect(wrapped.find('.todo-list-item__details__id').at(3).text()).toEqual('1');
         });
 
         it('id', () => {
             changeSorting(SortOptions.SORT_ID);
 
-            expect(wrapped.find('.todo-item-details-id').at(0).text()).toEqual('1');
-            expect(wrapped.find('.todo-item-details-id').at(1).text()).toEqual('2');
-            expect(wrapped.find('.todo-item-details-id').at(2).text()).toEqual('3');
-            expect(wrapped.find('.todo-item-details-id').at(3).text()).toEqual('4');
+            expect(wrapped.find('.todo-list-item__details__id').at(0).text()).toEqual('1');
+            expect(wrapped.find('.todo-list-item__details__id').at(1).text()).toEqual('2');
+            expect(wrapped.find('.todo-list-item__details__id').at(2).text()).toEqual('3');
+            expect(wrapped.find('.todo-list-item__details__id').at(3).text()).toEqual('4');
         });
 
         it('text', () => {
             changeSorting(SortOptions.SORT_NAME);
 
-            expect(wrapped.find('.todo-item-details-id').at(0).text()).toEqual('4');
-            expect(wrapped.find('.todo-item-details-id').at(1).text()).toEqual('3');
-            expect(wrapped.find('.todo-item-details-id').at(2).text()).toEqual('2');
-            expect(wrapped.find('.todo-item-details-id').at(3).text()).toEqual('1');
+            expect(wrapped.find('.todo-list-item__details__id').at(0).text()).toEqual('4');
+            expect(wrapped.find('.todo-list-item__details__id').at(1).text()).toEqual('3');
+            expect(wrapped.find('.todo-list-item__details__id').at(2).text()).toEqual('2');
+            expect(wrapped.find('.todo-list-item__details__id').at(3).text()).toEqual('1');
         });
     });
 });

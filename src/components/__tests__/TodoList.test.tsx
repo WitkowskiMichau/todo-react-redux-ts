@@ -30,6 +30,6 @@ describe('Todo: ', () => {
     });
 
     it('render one selected todo', () => {
-        expect(wrapped.find('.active').length).toEqual(1);
+        expect(wrapped.find('.todo-list__item--selected').length).toEqual(1);
     });
 });
