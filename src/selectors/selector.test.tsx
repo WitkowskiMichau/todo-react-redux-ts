@@ -1,8 +1,8 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import { mount } from 'enzyme';
 import App from '../components/App';
-import { SortOptions } from "../sortOptions";
-import Root from "../Root";
+import { SortOptions } from '../sortOptions';
+import Root from '../Root';
 
 describe('Selector: ', () => {
     let wrapped;
