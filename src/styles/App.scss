@@ -170,10 +170,20 @@
     height: 22px;
     width: 22px;
     border-radius: 27px;
-    font-size: 20px;
-    line-height: 16px;
     color: $white-color;
     border: none;
+    border: none;
+    &__plus{
+      position: absolute;
+      bottom: 3px;
+      font-size: 17px;
+      left: 6px;
+      overflow: hidden;
+    }
+    &:active, &:hover, &:focus {
+      outline: none !important;
+      border: none;
+    }
     &:hover {
       background-color: $green-hover-color;
     }

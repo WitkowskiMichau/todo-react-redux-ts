@@ -140,10 +140,18 @@
     height: 22px;
     width: 22px;
     border-radius: 27px;
-    font-size: 20px;
-    line-height: 16px;
     color: #ffffff;
+    border: none;
     border: none; }
+    .submit-form__button__plus {
+      position: absolute;
+      bottom: 3px;
+      font-size: 17px;
+      left: 6px;
+      overflow: hidden; }
+    .submit-form__button:active, .submit-form__button:hover, .submit-form__button:focus {
+      outline: none !important;
+      border: none; }
     .submit-form__button:hover {
       background-color: #1cd427; }
 

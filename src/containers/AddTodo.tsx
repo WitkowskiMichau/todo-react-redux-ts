@@ -39,7 +39,7 @@ class AddTodo extends Component<Props, State> {
                     className="submit-form__button"
                     type="submit"
                 >
-                    +
+                    <span className="submit-form__button__plus">+</span>
                 </button>
             </form>
         )
