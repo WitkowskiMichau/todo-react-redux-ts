@@ -1,12 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import App from '../components/App';
-import { SortOptions } from '../sortOptions';
-import Root from '../Root';
+import App from '../../components/App';
+import { ReduxState } from '../../Interfaces';
+import { SortOptions } from '../../sortOptions';
+import Root from '../../Root';
 
 describe('Selector: ', () => {
     let wrapped;
-    let initialState = {
+    let initialState: ReduxState = {
         todoSelected: {
             id: 2,
             text: 'zz',

@@ -1,9 +1,9 @@
-import { actionTypes } from '../actionTypes';
+import { ActionTypes } from '../actionTypes';
 import { Action } from '../Interfaces';
 
-const todoSelected = (state: null | actionTypes  = null , action: Action<any>) => {
+const todoSelected = (state: null | ActionTypes  = null , action: Action<any>) => {
     switch (action.type) {
-        case actionTypes.SELECT_TODO:
+        case ActionTypes.SELECT_TODO:
             return action.payload;
         default:
             return state

@@ -1,11 +1,11 @@
 import React from 'react'
 import Todo from '../components/Todo'
-import { todoType } from '../Interfaces';
+import { TodoType } from '../Interfaces';
 
 interface Props {
-    todos: Array<todoType>
-    selectedTodo: todoType,
-    selectTodo: (todo: todoType) => any,
+    todos: Array<TodoType>
+    selectedTodo: TodoType,
+    selectTodo: (todo: TodoType) => any,
     deleteTodo: (id: number) => any
 }
 

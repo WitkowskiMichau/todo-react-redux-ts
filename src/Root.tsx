@@ -1,6 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import { ReduxState } from './Interfaces';
 import rootReducer from './reducers/index';
 
 interface Window {
@@ -9,7 +10,12 @@ interface Window {
 
 declare var window: Window;
 
-export default (props) => {
+interface Props {
+    initialState: object,
+    children?: any
+}
+
+export default (props: Props): Provider => {
     if (!props.initialState) {
         props.initialState = {}
     }

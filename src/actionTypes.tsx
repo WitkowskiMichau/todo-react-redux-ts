@@ -1,4 +1,4 @@
-export enum actionTypes {
+export enum ActionTypes {
     ADD_TODO = 'ADD_TODO',
     DELETE_TODO = 'DELETE_TODO',
     SET_TODO_SORTING = 'SET_TODO_SORTING',

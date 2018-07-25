@@ -1,12 +1,11 @@
-import { createSelector } from 'reselect'
+import { createSelector } from 'reselect';
+import { ReduxState, TodoType } from '../Interfaces';
 import { SortOptions } from '../sortOptions';
 
-const getSorting = (state) => state.todosSorting;
-const getTodos = (state) => state.todos;
+const getSorting = (state: ReduxState): SortOptions => state.todosSorting;
+const getTodos = (state: ReduxState): Array<TodoType> => state.todos;
 
-export const getSortedTodos = createSelector(
-    [ getSorting, getTodos ],
-    (todosSorting, todos) => {
+export const getSortedTodos = createSelector([ getSorting, getTodos ], (todosSorting: SortOptions, todos: Array<TodoType>) => {
         switch (todosSorting) {
             case SortOptions.SORT_NAME:
                 return todos.slice(0).sort((a, b) => a.text.localeCompare(b.text));

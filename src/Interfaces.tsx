@@ -1,17 +1,17 @@
-import { actionTypes } from './actionTypes';
+import { ActionTypes } from './actionTypes';
 import { SortOptions } from './sortOptions';
 
-export type todoType = {
+export type TodoType = {
     text: string,
     id: number,
     timestamp: number
-};
+}
 export type Action<T> = {
-    type: actionTypes;
+    type: ActionTypes;
     payload: T;
-};
+}
 export interface ReduxState {
-    todos: Array<todoType>,
-    todoSelected: todoType,
+    todos: Array<TodoType>,
+    todoSelected: TodoType,
     todosSorting: SortOptions
-};
+}
