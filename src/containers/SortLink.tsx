@@ -8,11 +8,11 @@ interface Props {
     active: boolean,
     children: any,
     onClick: () => any
-};
+}
 
 export interface OwnProps {
     sortBy: SortOptions
-};
+}
 
 interface StateProps {
     active: boolean
