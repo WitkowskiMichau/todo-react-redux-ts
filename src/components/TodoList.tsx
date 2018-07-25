@@ -11,7 +11,7 @@ interface Props {
 
 const TodoList: React.StatelessComponent<Props> = ({todos, selectedTodo, selectTodo, deleteTodo}) => (
     <div className="todo-list">
-        {todos.map((todo:TodoType) =>
+        {todos.map((todo: TodoType) =>
             <div className={`todo-list__item ${selectedTodo !== null && selectedTodo.id === todo.id ? 'todo-list__item--selected' : ''}`} key={todo.id}>
                 <Todo
                     {...todo}
