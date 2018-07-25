@@ -5,7 +5,7 @@ html, body {
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #347FE6 0%, #4CA0EF 100%); }
+  background: lightslategrey; }
 
 #root {
   height: 100%;

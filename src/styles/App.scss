@@ -4,7 +4,7 @@
   @extend %box-shadow;
   width: 400px;
   height: 600px;
-  background-color: $light-steel-color;
+  background-color: $light-gray;
   color: $black-color;
   padding: 5px 0;
   border-radius: 15px;
@@ -39,10 +39,10 @@
     position: relative;
     cursor: pointer;
     &--selected {
-      background-color: $medium-turquoise;
+      background-color:$cornflower-blue-color;
     }
     &:hover {
-      background-color: $medium-turquoise;
+      background-color: $cornflower-blue-color;
     }
   }
 }
@@ -103,10 +103,10 @@
     font-size: 10px;
     cursor: pointer;
     &:hover {
-      background-color: $medium-turquoise;;
+      background-color: $cornflower-blue-color;
     }
     &--active {
-      background-color: $medium-turquoise;;
+      background-color: $cornflower-blue-color;
     }
     &:first-child {
       margin-left: 0;

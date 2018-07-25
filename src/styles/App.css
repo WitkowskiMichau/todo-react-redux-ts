@@ -1,7 +1,7 @@
 .app-container {
   width: 400px;
   height: 600px;
-  background-color: #F6F7F8;
+  background-color: #F8F8F8;
   color: #000000;
   padding: 5px 0;
   border-radius: 15px;
@@ -33,9 +33,9 @@
     position: relative;
     cursor: pointer; }
     .todo-list__item--selected {
-      background-color: #63D7D9; }
+      background-color: #49c9ef; }
     .todo-list__item:hover {
-      background-color: #63D7D9; }
+      background-color: #49c9ef; }
 
 .todo-list-item__details {
   display: flex;
@@ -86,9 +86,9 @@
     font-size: 10px;
     cursor: pointer; }
     .table-header__item:hover {
-      background-color: #63D7D9; }
+      background-color: #49c9ef; }
     .table-header__item--active {
-      background-color: #63D7D9; }
+      background-color: #49c9ef; }
     .table-header__item:first-child {
       margin-left: 0; }
 
@@ -119,7 +119,7 @@
     position: absolute;
     right: 16px;
     top: 14px;
-    background-color: #48b458;
+    background-color: #4ebd5e;
     height: 22px;
     width: 22px;
     border-radius: 27px;
