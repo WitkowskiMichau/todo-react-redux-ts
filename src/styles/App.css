@@ -95,18 +95,18 @@
   .table-header__item {
     background-color: white;
     padding: 6px 11px;
-    margin: 0 6px;
+    margin: 0 4px;
     border-radius: 16px;
     font-size: 10px;
     cursor: pointer; }
     .table-header__item:hover {
       border: 2px solid #49c9ef;
-      margin: 0 4px; }
+      margin: 0 2px;
+      padding: 5px 11px; }
     .table-header__item--active {
       border: 2px solid #49c9ef;
-      margin: 0 4px; }
-    .table-header__item:first-child {
-      margin-left: 0; }
+      margin: 0 2px;
+      padding: 5px 11px; }
 
 .submit-form {
   height: 50px;
